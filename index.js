@@ -12,7 +12,7 @@ app.get('*', async (req,res) => {
 
   try {
     let s3File = await s3.getObject({
-      Bucket: process.env.BUCKET,
+      Bucket:"cyclic-weak-jade-scallop-robe-eu-west-3",
       Key: filename,
     }).promise()
 
