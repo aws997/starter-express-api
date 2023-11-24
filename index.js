@@ -38,7 +38,7 @@ app.put('*', async (req,res) => {
 
   await s3.putObject({
     Body: JSON.stringify(req.body),
-    Bucket: process.env.BUCKET,
+    Bucket: "cyclic-weak-jade-scallop-robe-eu-west-3",
     Key: filename,
   }).promise()
 
@@ -51,7 +51,7 @@ app.delete('*', async (req,res) => {
   let filename = req.path.slice(1)
 
   await s3.deleteObject({
-    Bucket: process.env.BUCKET,
+    Bucket:"cyclic-weak-jade-scallop-robe-eu-west-3",
     Key: filename,
   }).promise()
 
